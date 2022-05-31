@@ -8,8 +8,13 @@ public class AdventureGame {
         String start = playerInput.next();
 
         if(start.equalsIgnoreCase("Y")){
-            System.out.println("What is your name?");
+            System.out.println("Will you play as Trix or Luna? [T/L]");
             String playerName = playerInput.next();
+            if(playerName.equalsIgnoreCase("T")){
+                playerName = "Trix";
+            } else if (playerName.equalsIgnoreCase("L")) {
+                playerName = "Luna";
+            }
 
             gameInit(playerName, playerInput);
         } else {
